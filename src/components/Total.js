@@ -6,14 +6,14 @@ import { addPrice } from '../actions'
 const Total = props => {
   return (
     <div className="content">
-      <h4>Total Amount: ${props.price + props.additionalPrice}</h4>
+      <h4>Total Amount: ${props.total}</h4>
     </div>
   );
 };
 
 const mapStateToProps = (state) =>{
   return{
-    price: state.car.price,
+    total: state.total,
     additionalPrice: state.additionalPrice
   }
 }
