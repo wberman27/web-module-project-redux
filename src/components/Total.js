@@ -9,7 +9,7 @@ const Total = props => {
     </div>
   );
 };
-
+//give state.total prop to Total
 const mapStateToProps = (state) =>{
   return{
     total: state.total,

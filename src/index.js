@@ -9,6 +9,7 @@ import './styles.scss';
 import logger from 'redux-logger'
 
 //create store from redux
+//applyMiddleware(logger) allows for redux debugging
 const store = createStore(reducer, applyMiddleware(logger))
 
 //wrap App in Provider component from react-redux, pass in store prop

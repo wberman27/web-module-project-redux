@@ -23,6 +23,7 @@ export const reducer = (state = initialState, action) => {
     switch (action.type){
         case ADD_FEATURE:
             return{
+                //add action.payload to features array
                 ...state,
                 car: {...state.car,
                         features: [...state.car.features, action.payload] },
@@ -30,6 +31,7 @@ export const reducer = (state = initialState, action) => {
             }
         case REMOVE_FEATURE:
             return{
+                //spread state object, filter features array by not adding action.payload to new array
                 ...state,
                 car: {...state.car,
                     features: state.car.features.filter(item => item !== action.payload)},
